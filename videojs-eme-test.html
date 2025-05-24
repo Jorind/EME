@@ -29,7 +29,7 @@
 
     player.ready(function () {
       player.eme(); // Enable EME plugin
-	  player.eme.initLegacyFairplay();
+	  <!-- player.eme.initLegacyFairplay(); -->
 
       player.src({
         src: 'https://content-cdn-drm.dev.grapeseed.com/a4b142bc-c314-4420-95e1-9e2a65062588/LSv1-U4-REP-Be-Like-a-Baby.m3u8', // DASH for Widevine, HLS for FairPlay
@@ -41,7 +41,7 @@
 					<!-- 'X-AxDRM-Message': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiODIyOGEwMDUtMjk0OS00ZmU4LWEwY2EtYjIzNDAwYjE3NDYwIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsInZlcnNpb24iOjIsImxpY2Vuc2UiOnsiYWxsb3dfcGVyc2lzdGVuY2UiOnRydWUsImZlYXR1cmVzIjpbImZlYXR1cmUxIiwiZmVhdHVyZTIiLCJmZWF0dXJlMyJdLCJmYWlycGxheSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX0sInBsYXlyZWFkeSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX19LCJjb250ZW50X2tleXNfc291cmNlIjp7ImlubGluZSI6W3siaWQiOiJiZmE4MzQwYy1iZjFjLWQ4OGYtNGE4NC1hYzc5NGU0YmMzYTUiLCJ1c2FnZV9wb2xpY3kiOiJQb2xpY3lBIn1dfSwiY29udGVudF9rZXlfdXNhZ2VfcG9saWNpZXMiOlt7Im5hbWUiOiJQb2xpY3lBIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0NSWVBUTyJ9fSx7Im5hbWUiOiJQb2xpY3lCIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0RFQ09ERSJ9fV19fQ._AqA2PTcXRPjVQVrO1NS8E3bN8hhTabp5lg7GVER84s'  -->
 				<!-- }, -->
 			<!-- }, -->
-			'com.apple.fps.1_0': {
+			'com.apple.fps': {
 				certificateUri: 'https://content-cdn-drm.dev.grapeseed.com/fairplay-certificate/fairplay.cer',
 				licenseUri: 'https://drm-fairplay-licensing.axprod.net/AcquireLicense',
 				licenseHeaders: {
