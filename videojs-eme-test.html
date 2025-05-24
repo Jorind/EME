@@ -36,30 +36,32 @@
         type: 'application/vnd.apple.mpegurl', // Use 'application/dash+xml' for non HLS  application/vnd.apple.mpegurl for hls
         keySystems: {
           'com.widevine.alpha': {
-            url: 'https://drm-widevine-licensing.axprod.net/AcquireLicense',
-            licenseHeaders: { 
-				'X-AxDRM-Message': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiODIyOGEwMDUtMjk0OS00ZmU4LWEwY2EtYjIzNDAwYjE3NDYwIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsInZlcnNpb24iOjIsImxpY2Vuc2UiOnsiYWxsb3dfcGVyc2lzdGVuY2UiOnRydWUsImZlYXR1cmVzIjpbImZlYXR1cmUxIiwiZmVhdHVyZTIiLCJmZWF0dXJlMyJdLCJmYWlycGxheSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX0sInBsYXlyZWFkeSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX19LCJjb250ZW50X2tleXNfc291cmNlIjp7ImlubGluZSI6W3siaWQiOiJiZmE4MzQwYy1iZjFjLWQ4OGYtNGE4NC1hYzc5NGU0YmMzYTUiLCJ1c2FnZV9wb2xpY3kiOiJQb2xpY3lBIn1dfSwiY29udGVudF9rZXlfdXNhZ2VfcG9saWNpZXMiOlt7Im5hbWUiOiJQb2xpY3lBIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0NSWVBUTyJ9fSx7Im5hbWUiOiJQb2xpY3lCIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0RFQ09ERSJ9fV19fQ._AqA2PTcXRPjVQVrO1NS8E3bN8hhTabp5lg7GVER84s' },
-          },
-		'com.apple.fps.1_0': {
-				certificateUri: 'https://vtb.axinom.com/FPScert/fairplay.cer',
-				licenseUri: 'https://drm-fairplay-licensing.axprod.net/AcquireLicense',
-				licenseHeaders: {
-					'X-AxDRM-Message':
-						'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiODIyOGEwMDUtMjk0OS00ZmU4LWEwY2EtYjIzNDAwYjE3NDYwIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsInZlcnNpb24iOjIsImxpY2Vuc2UiOnsiYWxsb3dfcGVyc2lzdGVuY2UiOnRydWUsImZlYXR1cmVzIjpbImZlYXR1cmUxIiwiZmVhdHVyZTIiLCJmZWF0dXJlMyJdLCJmYWlycGxheSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX0sInBsYXlyZWFkeSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX19LCJjb250ZW50X2tleXNfc291cmNlIjp7ImlubGluZSI6W3siaWQiOiJiZmE4MzQwYy1iZjFjLWQ4OGYtNGE4NC1hYzc5NGU0YmMzYTUiLCJ1c2FnZV9wb2xpY3kiOiJQb2xpY3lBIn1dfSwiY29udGVudF9rZXlfdXNhZ2VfcG9saWNpZXMiOlt7Im5hbWUiOiJQb2xpY3lBIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0NSWVBUTyJ9fSx7Im5hbWUiOiJQb2xpY3lCIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0RFQ09ERSJ9fV19fQ._AqA2PTcXRPjVQVrO1NS8E3bN8hhTabp5lg7GVER84s',
+				url: 'https://drm-widevine-licensing.axprod.net/AcquireLicense',
+				licenseHeaders: { 
+					'X-AxDRM-Message': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiODIyOGEwMDUtMjk0OS00ZmU4LWEwY2EtYjIzNDAwYjE3NDYwIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsInZlcnNpb24iOjIsImxpY2Vuc2UiOnsiYWxsb3dfcGVyc2lzdGVuY2UiOnRydWUsImZlYXR1cmVzIjpbImZlYXR1cmUxIiwiZmVhdHVyZTIiLCJmZWF0dXJlMyJdLCJmYWlycGxheSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX0sInBsYXlyZWFkeSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX19LCJjb250ZW50X2tleXNfc291cmNlIjp7ImlubGluZSI6W3siaWQiOiJiZmE4MzQwYy1iZjFjLWQ4OGYtNGE4NC1hYzc5NGU0YmMzYTUiLCJ1c2FnZV9wb2xpY3kiOiJQb2xpY3lBIn1dfSwiY29udGVudF9rZXlfdXNhZ2VfcG9saWNpZXMiOlt7Im5hbWUiOiJQb2xpY3lBIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0NSWVBUTyJ9fSx7Im5hbWUiOiJQb2xpY3lCIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0RFQ09ERSJ9fV19fQ._AqA2PTcXRPjVQVrO1NS8E3bN8hhTabp5lg7GVER84s' 
 				},
-				getContentId: function (emeOptions, initData) {
-					// Filter unwanted characters from the initData
-					const filteredData = Array.from(initData).filter(
-						char => char.charCodeAt(0) !== 0 && char.charCodeAt(0) !== 150
-					);
-					// Convert filtered data back to Uint8Array for processing
-					const filteredUint8Array = new Uint8Array(
-						filteredData.map(char => char.charCodeAt(0))
-					);
-					// Use TextDecoder to convert back to a string
-					return new TextDecoder().decode(filteredUint8Array);
-				}
-        }	
+			},
+			'com.apple.fps.1_0': {
+					certificateUri: 'https://vtb.axinom.com/FPScert/fairplay.cer',
+					licenseUri: 'https://drm-fairplay-licensing.axprod.net/AcquireLicense',
+					licenseHeaders: {
+						'X-AxDRM-Message':
+							'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiODIyOGEwMDUtMjk0OS00ZmU4LWEwY2EtYjIzNDAwYjE3NDYwIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsInZlcnNpb24iOjIsImxpY2Vuc2UiOnsiYWxsb3dfcGVyc2lzdGVuY2UiOnRydWUsImZlYXR1cmVzIjpbImZlYXR1cmUxIiwiZmVhdHVyZTIiLCJmZWF0dXJlMyJdLCJmYWlycGxheSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX0sInBsYXlyZWFkeSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX19LCJjb250ZW50X2tleXNfc291cmNlIjp7ImlubGluZSI6W3siaWQiOiJiZmE4MzQwYy1iZjFjLWQ4OGYtNGE4NC1hYzc5NGU0YmMzYTUiLCJ1c2FnZV9wb2xpY3kiOiJQb2xpY3lBIn1dfSwiY29udGVudF9rZXlfdXNhZ2VfcG9saWNpZXMiOlt7Im5hbWUiOiJQb2xpY3lBIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0NSWVBUTyJ9fSx7Im5hbWUiOiJQb2xpY3lCIiwid2lkZXZpbmUiOnsiZGV2aWNlX3NlY3VyaXR5X2xldmVsIjoiU1dfU0VDVVJFX0RFQ09ERSJ9fV19fQ._AqA2PTcXRPjVQVrO1NS8E3bN8hhTabp5lg7GVER84s',
+					},
+					getContentId: function (emeOptions, initData) {
+						// Filter unwanted characters from the initData
+						const filteredData = Array.from(initData).filter(
+							char => char.charCodeAt(0) !== 0 && char.charCodeAt(0) !== 150
+						);
+						// Convert filtered data back to Uint8Array for processing
+						const filteredUint8Array = new Uint8Array(
+							filteredData.map(char => char.charCodeAt(0))
+						);
+						// Use TextDecoder to convert back to a string
+						return new TextDecoder().decode(filteredUint8Array);
+					}
+			}
+		}
       });
     });
   </script>
