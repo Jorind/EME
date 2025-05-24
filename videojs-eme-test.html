@@ -32,7 +32,7 @@
 
       player.src({
         src: 'https://content-cdn-drm.dev.grapeseed.com/a4b142bc-c314-4420-95e1-9e2a65062588/LSv1-U4-REP-Be-Like-a-Baby.m3u8', // DASH for Widevine, HLS for FairPlay
-        type: 'application/x-mpegURL', // Use 'application/dash+xml' for non HLS 
+        type: 'application/vnd.apple.mpegurl', // Use 'application/dash+xml' for non HLS  application/vnd.apple.mpegurl for hls
         keySystems: {
           'com.widevine.alpha': {
             url: 'https://drm-widevine-licensing.axprod.net/AcquireLicense',
